@@ -1,6 +1,6 @@
 # Box Kaster Lite
 
-This is technically the first iteration of the [Box Kaster](https://gitlab.com/ARandomMeatball/box-kaster) program, just written in C++ and uses the CLI.
+This is technically the first iteration of the [Box Kaster](https://github.com/armbahl/Box-Kaster) program, just written in C++ and uses the CLI.
 
 It has fewer quality of life features, but has all of the main functions needed to make a proper cardboard box.
 
