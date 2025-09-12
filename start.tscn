@@ -1,0 +1,1524 @@
+[gd_scene load_steps=65 format=3 uid="uid://dnggbi4a0ffjh"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_lqe1n"]
+[ext_resource type="Theme" uid="uid://b35d76hgo7td1" path="res://Themes/Main_Theme.tres" id="1_oyqvh"]
+[ext_resource type="Theme" uid="uid://dab4w51pvmui3" path="res://Themes/NavBut_Theme.tres" id="2_oj670"]
+[ext_resource type="StyleBox" uid="uid://dy8v1fjcuxht8" path="res://Themes/Boxes/CalcButtonBox.tres" id="4_7codw"]
+[ext_resource type="Script" path="res://Scripts/Buttons/BackToMain.gd" id="4_nwolv"]
+[ext_resource type="Texture2D" uid="uid://crlw1mw8mcsup" path="res://blank.png" id="4_q0xwc"]
+[ext_resource type="Theme" uid="uid://v4yr6probwy0" path="res://Themes/Lic_MAIN.tres" id="7_tka2w"]
+[ext_resource type="FontFile" uid="uid://bsvrv04mruawp" path="res://Fonts/Arcon-Regular.otf" id="8_h3ms5"]
+[ext_resource type="Theme" uid="uid://dfwp7kdhta0q4" path="res://Themes/Lic_Text.tres" id="8_hjux4"]
+[ext_resource type="Script" path="res://Scripts/Buttons/LicButtns.gd" id="8_imudp"]
+[ext_resource type="Theme" uid="uid://c24ikx7nwuggp" path="res://Themes/Outp_Labels.tres" id="10_5s2mb"]
+[ext_resource type="Theme" uid="uid://cvq4vcltnsgub" path="res://Themes/Labels.tres" id="10_w588s"]
+[ext_resource type="Script" path="res://Scripts/HowTo.gd" id="11_3l5ny"]
+[ext_resource type="Texture2D" uid="uid://co1m0hxcfq6id" path="res://Photos/B_1.jpg" id="11_exh0k"]
+[ext_resource type="Texture2D" uid="uid://djblj5ee8ghd0" path="res://Photos/B_2.jpg" id="12_4eipp"]
+[ext_resource type="Texture2D" uid="uid://c6hhs6ma86e03" path="res://Photos/B_3.jpg" id="13_grfx2"]
+[ext_resource type="Texture2D" uid="uid://be1dh36wd5g0m" path="res://BK_Diagram.jpg" id="13_pxha1"]
+[ext_resource type="Texture2D" uid="uid://dqpyn8uyv0cor" path="res://Photos/B_4.jpg" id="14_slmjb"]
+[ext_resource type="Texture2D" uid="uid://7s5kdhcjg5ic" path="res://Photos/B_5.jpg" id="15_bbafd"]
+[ext_resource type="Texture2D" uid="uid://bxx7ulefb0maq" path="res://Photos/B_6.jpg" id="16_v3yd4"]
+[ext_resource type="Theme" uid="uid://f5xo36w6aer3" path="res://Themes/HowTo_Labels.tres" id="22_42omk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obv63"]
+bg_color = Color(1, 0, 0.54902, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 10
+border_width_bottom = 3
+border_color = Color(1, 0.6, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_top = 15.0
+expand_margin_right = 10.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snjiv"]
+bg_color = Color(0.160784, 0.160784, 0.160784, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0.556863, 0.709804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 20.0
+expand_margin_right = 10.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_ku6qu"]
+HSlider/icons/grabber = ExtResource("4_q0xwc")
+HSlider/icons/grabber_disabled = ExtResource("4_q0xwc")
+HSlider/icons/grabber_highlight = ExtResource("4_q0xwc")
+HSlider/icons/tick = ExtResource("4_q0xwc")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_obv63")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_obv63")
+HSlider/styles/slider = SubResource("StyleBoxFlat_snjiv")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qo1xm"]
+bg_color = Color(0, 0.74902, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ne48f"]
+bg_color = Color(0, 0.55, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkmcr"]
+bg_color = Color(0, 0.556863, 0.709804, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_pjlv1"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("8_h3ms5")
+Button/styles/focus = ExtResource("4_7codw")
+Button/styles/hover = SubResource("StyleBoxFlat_qo1xm")
+Button/styles/normal = ExtResource("4_7codw")
+Button/styles/pressed = SubResource("StyleBoxFlat_ne48f")
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_uneditable_color = Color(1, 1, 1, 1)
+LineEdit/colors/selection_color = Color(0, 0.5, 0, 1)
+LineEdit/font_sizes/font_size = 24
+LineEdit/fonts/font = ExtResource("8_h3ms5")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_xkmcr")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_xkmcr")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_xkmcr")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6sxm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cldm"]
+bg_color = Color(0.8, 0.28, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac1qt"]
+bg_color = Color(1, 0.35, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m4ag"]
+bg_color = Color(0.8, 0.278431, 0, 1)
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ib8k4"]
+bg_color = Color(0.6, 0.21, 0, 1)
+
+[sub_resource type="Theme" id="Theme_dfjop"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("8_h3ms5")
+Button/styles/disabled = SubResource("StyleBoxFlat_u6sxm")
+Button/styles/focus = SubResource("StyleBoxFlat_7cldm")
+Button/styles/hover = SubResource("StyleBoxFlat_ac1qt")
+Button/styles/normal = SubResource("StyleBoxFlat_8m4ag")
+Button/styles/pressed = SubResource("StyleBoxFlat_ib8k4")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seebd"]
+bg_color = Color(0, 0.74902, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87f0y"]
+bg_color = Color(0, 0.65, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20s02"]
+bg_color = Color(0, 0.55, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osxx3"]
+bg_color = Color(0.43, 0.325, 0.5, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esws4"]
+bg_color = Color(0.43, 0.325, 0.5, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0y2k4"]
+bg_color = Color(0.43, 0.325, 0.5, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_tfg27"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("8_h3ms5")
+Button/styles/focus = ExtResource("4_7codw")
+Button/styles/hover = SubResource("StyleBoxFlat_seebd")
+Button/styles/normal = SubResource("StyleBoxFlat_87f0y")
+Button/styles/pressed = SubResource("StyleBoxFlat_20s02")
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/selection_color = Color(0, 0.5, 0, 1)
+LineEdit/font_sizes/font_size = 20
+LineEdit/fonts/font = ExtResource("8_h3ms5")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_osxx3")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_esws4")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_0y2k4")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flqti"]
+bg_color = Color(0.43, 0.325, 0.5, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m68j6"]
+bg_color = Color(0.43, 0.325, 0.5, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtv83"]
+bg_color = Color(0.43, 0.325, 0.5, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_0srcl"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("8_h3ms5")
+Button/styles/focus = ExtResource("4_7codw")
+Button/styles/hover = SubResource("StyleBoxFlat_seebd")
+Button/styles/normal = ExtResource("4_7codw")
+Button/styles/pressed = SubResource("StyleBoxFlat_20s02")
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/selection_color = Color(0, 0.5, 0, 1)
+LineEdit/font_sizes/font_size = 20
+LineEdit/fonts/font = ExtResource("8_h3ms5")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_flqti")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_m68j6")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_dtv83")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eee6a"]
+bg_color = Color(0, 0.32549, 0.74902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqmld"]
+bg_color = Color(0, 0.433333, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mngs7"]
+bg_color = Color(0, 0.32549, 0.74902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rttiq"]
+bg_color = Color(0, 0.216667, 0.5, 1)
+
+[sub_resource type="Theme" id="Theme_agl3k"]
+Button/font_sizes/font_size = 26
+Button/fonts/font = ExtResource("8_h3ms5")
+Button/styles/focus = SubResource("StyleBoxFlat_eee6a")
+Button/styles/hover = SubResource("StyleBoxFlat_oqmld")
+Button/styles/normal = SubResource("StyleBoxFlat_mngs7")
+Button/styles/pressed = SubResource("StyleBoxFlat_rttiq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bauv5"]
+bg_color = Color(0.215686, 0.215686, 0.290196, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.1406, 0.1406, 0.19, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n462b"]
+bg_color = Color(0, 0.74902, 0.74902, 1)
+border_width_left = 4
+border_width_bottom = 4
+border_color = Color(0, 0.501961, 0.501961, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuiei"]
+bg_color = Color(0.75, 0, 0.75, 1)
+border_width_left = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.6, 0, 0.6, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i8sk3"]
+bg_color = Color(0.75, 0, 0, 1)
+border_width_left = 4
+border_width_bottom = 4
+border_color = Color(0.5, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bre1q"]
+bg_color = Color(0, 0.75, 0, 1)
+border_width_left = 4
+border_width_bottom = 4
+border_color = Color(0, 0.5, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mc6k"]
+bg_color = Color(0.6, 0.21, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kg0kf"]
+bg_color = Color(0.8, 0.28, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwa5c"]
+bg_color = Color(1, 0.35, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rivd7"]
+bg_color = Color(0.8, 0.278431, 0, 1)
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ieapm"]
+bg_color = Color(0.6, 0.21, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+
+[sub_resource type="Theme" id="Theme_nn1no"]
+Button/font_sizes/font_size = 25
+Button/fonts/font = ExtResource("8_h3ms5")
+Button/styles/disabled = SubResource("StyleBoxFlat_2mc6k")
+Button/styles/focus = SubResource("StyleBoxFlat_kg0kf")
+Button/styles/hover = SubResource("StyleBoxFlat_cwa5c")
+Button/styles/normal = SubResource("StyleBoxFlat_rivd7")
+Button/styles/pressed = SubResource("StyleBoxFlat_ieapm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ipyx"]
+bg_color = Color(0, 0.74902, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1l56"]
+bg_color = Color(0, 0.55, 0, 1)
+
+[sub_resource type="Theme" id="Theme_81102"]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("8_h3ms5")
+Button/styles/focus = ExtResource("4_7codw")
+Button/styles/hover = SubResource("StyleBoxFlat_3ipyx")
+Button/styles/normal = ExtResource("4_7codw")
+Button/styles/pressed = SubResource("StyleBoxFlat_a1l56")
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OptScrn" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.301961, 0.301961, 0.301961, 1)
+script = ExtResource("4_nwolv")
+metadata/_edit_use_anchors_ = true
+
+[node name="DCS_Cont" type="Control" parent="OptScrn"]
+layout_mode = 1
+anchor_left = 0.0357143
+anchor_top = 0.04
+anchor_right = 0.964286
+anchor_bottom = 0.18
+metadata/_edit_use_anchors_ = true
+
+[node name="DCS_Label" type="Label" parent="OptScrn/DCS_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.428571
+theme = ExtResource("10_w588s")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Default Cardboard Size:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DCS_A" type="LineEdit" parent="OptScrn/DCS_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.428571
+anchor_right = 0.461538
+anchor_bottom = 1.0
+focus_next = NodePath("../DCS_B")
+focus_previous = NodePath("../DCS_B")
+theme = ExtResource("1_oyqvh")
+theme_override_font_sizes/font_size = 30
+text = "30"
+alignment = 1
+max_length = 6
+context_menu_enabled = false
+virtual_keyboard_type = 3
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="DCS_B" type="LineEdit" parent="OptScrn/DCS_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.538462
+anchor_top = 0.428571
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_next = NodePath("../DCS_A")
+focus_previous = NodePath("../DCS_A")
+theme = ExtResource("1_oyqvh")
+theme_override_font_sizes/font_size = 30
+text = "50"
+alignment = 1
+max_length = 6
+context_menu_enabled = false
+virtual_keyboard_type = 3
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LS_Cont" type="Control" parent="OptScrn"]
+layout_mode = 1
+anchor_left = 0.0357143
+anchor_top = 0.22
+anchor_right = 0.964286
+anchor_bottom = 0.36
+metadata/_edit_use_anchors_ = true
+
+[node name="LS_Label" type="Label" parent="OptScrn/LS_Cont"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 0.428571
+theme = ExtResource("10_w588s")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Lip Size:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LS_Slider" type="HSlider" parent="OptScrn/LS_Cont"]
+layout_mode = 0
+anchor_top = 0.428571
+anchor_right = 0.730769
+anchor_bottom = 1.0
+focus_mode = 0
+theme = SubResource("Theme_ku6qu")
+max_value = 7.0
+value = 7.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LS_Display" type="LineEdit" parent="OptScrn/LS_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.769231
+anchor_top = 0.428571
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_next = NodePath("../CardSizeB")
+focus_previous = NodePath("../CardSizeB")
+theme = SubResource("Theme_pjlv1")
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 30
+text = "FULL"
+alignment = 1
+max_length = 6
+editable = false
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Op_Exit" type="Button" parent="OptScrn"]
+layout_mode = 0
+anchor_top = 0.86
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+theme = ExtResource("1_oyqvh")
+text = "Save and Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Op_Help" type="Button" parent="OptScrn"]
+layout_mode = 0
+anchor_top = 0.76
+anchor_right = 1.0
+anchor_bottom = 0.86
+focus_mode = 0
+theme = SubResource("Theme_dfjop")
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
+[node name="LicScrn" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.301961, 0.301961, 0.301961, 1)
+script = ExtResource("8_imudp")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LicScrn"]
+layout_mode = 0
+anchor_left = 0.0357143
+anchor_top = 0.04
+anchor_right = 0.964286
+anchor_bottom = 0.12
+theme_override_constants/separation = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="LicB_BoxKaster" type="Button" parent="LicScrn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_tka2w")
+text = "Box
+Kaster"
+
+[node name="LicB_Godot" type="Button" parent="LicScrn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_tka2w")
+text = "Godot"
+
+[node name="LicB_FreeType" type="Button" parent="LicScrn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_tka2w")
+text = "FreeType"
+
+[node name="LicB_ENet" type="Button" parent="LicScrn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_tka2w")
+text = "ENet"
+
+[node name="LicB_mbed" type="Button" parent="LicScrn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_tka2w")
+text = " mbed TLS "
+
+[node name="LicB_Arcon" type="Button" parent="LicScrn/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("7_tka2w")
+text = "Arcon
+Font"
+
+[node name="Txt_Cont" type="Control" parent="LicScrn"]
+anchors_preset = 0
+anchor_top = 0.12
+anchor_right = 1.0
+anchor_bottom = 0.86
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="LicScrn/Txt_Cont"]
+layout_mode = 0
+anchor_left = 0.0357143
+anchor_top = 0.027027
+anchor_right = 0.964286
+anchor_bottom = 0.972973
+metadata/_edit_use_anchors_ = true
+
+[node name="Lic_BoxKaster" type="ScrollContainer" parent="LicScrn/Txt_Cont"]
+layout_mode = 0
+anchor_left = 0.0357143
+anchor_top = 0.027027
+anchor_right = 0.964286
+anchor_bottom = 0.972973
+metadata/_edit_use_anchors_ = true
+
+[node name="Txt_BoxKaster" type="Label" parent="LicScrn/Txt_Cont/Lic_BoxKaster"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_hjux4")
+text = "Box Kaster
+---
+Box Kaster © 2024 by Armbahl Creations is licensed under CC BY-SA 4.0. To view a copy of this license, visit
+https://creativecommons.org/licenses/by-sa/4.0/
+
+This software does not utilize any telemetry, does not collect any personal data, and does not need an internet connection to operate other than downloading the application."
+autowrap_mode = 2
+
+[node name="Lic_Godot" type="ScrollContainer" parent="LicScrn/Txt_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.027027
+anchor_right = 0.964286
+anchor_bottom = 0.972973
+metadata/_edit_use_anchors_ = true
+
+[node name="Txt_Godot" type="Label" parent="LicScrn/Txt_Cont/Lic_Godot"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_hjux4")
+text = "Godot
+---
+This software uses Godot Engine, available under the following license:
+
+Copyright (c) 2014-present Godot Engine contributors. Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+autowrap_mode = 2
+
+[node name="Lic_FreeType" type="ScrollContainer" parent="LicScrn/Txt_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.027027
+anchor_right = 0.964286
+anchor_bottom = 0.972973
+metadata/_edit_use_anchors_ = true
+
+[node name="Txt_FreeType" type="Label" parent="LicScrn/Txt_Cont/Lic_FreeType"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_hjux4")
+text = "FreeType
+---
+Portions of this software are copyright © 2024 The FreeType Project (www.freetype.org). All rights reserved."
+autowrap_mode = 2
+
+[node name="Lic_ENet" type="ScrollContainer" parent="LicScrn/Txt_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.027027
+anchor_right = 0.964286
+anchor_bottom = 0.972973
+metadata/_edit_use_anchors_ = true
+
+[node name="Txt_ENet" type="Label" parent="LicScrn/Txt_Cont/Lic_ENet"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_hjux4")
+text = "ENet
+---
+Copyright (c) 2002-2020 Lee Salzman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+autowrap_mode = 2
+
+[node name="Lic_mbed" type="ScrollContainer" parent="LicScrn/Txt_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.027027
+anchor_right = 0.964286
+anchor_bottom = 0.972973
+metadata/_edit_use_anchors_ = true
+
+[node name="Txt_mbed" type="Label" parent="LicScrn/Txt_Cont/Lic_mbed"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_hjux4")
+text = "mbed TLS
+---
+Copyright The Mbed TLS Contributors
+
+Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License."
+autowrap_mode = 2
+
+[node name="Lic_Arcon" type="ScrollContainer" parent="LicScrn/Txt_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.027027
+anchor_right = 0.964286
+anchor_bottom = 0.972973
+metadata/_edit_use_anchors_ = true
+
+[node name="Txt_Arcon" type="Label" parent="LicScrn/Txt_Cont/Lic_Arcon"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("8_hjux4")
+text = "Arcon-Regular Font
+---
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded, redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+\"Font Software\" refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.
+
+\"Reserved Font Name\" refers to any names specified as such after the copyright statement(s).
+
+\"Original Version\" refers to the collection of Font Software components as distributed by the Copyright Holder(s).
+
+\"Modified Version\" refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.
+
+\"Author\" refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.
+
+5) The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE."
+autowrap_mode = 2
+
+[node name="LicBack" type="Button" parent="LicScrn"]
+layout_mode = 0
+anchor_top = 0.86
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("1_oyqvh")
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="MainScrn" type="ColorRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.301961, 0.301961, 0.301961, 1)
+script = ExtResource("1_lqe1n")
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxSize_Cont" type="Control" parent="MainScrn"]
+layout_mode = 1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.66
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="MainScrn/BoxSize_Cont"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25, 0.25, 0.25, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxSizeA" type="LineEdit" parent="MainScrn/BoxSize_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.375
+anchor_right = 0.321429
+anchor_bottom = 0.875
+focus_next = NodePath("../BoxSizeB")
+focus_previous = NodePath("../BoxSizeC")
+theme = ExtResource("1_oyqvh")
+placeholder_text = "0"
+alignment = 1
+max_length = 6
+context_menu_enabled = false
+virtual_keyboard_type = 3
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxSizeB" type="LineEdit" parent="MainScrn/BoxSize_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.357143
+anchor_top = 0.375
+anchor_right = 0.642857
+anchor_bottom = 0.875
+focus_next = NodePath("../BoxSizeC")
+focus_previous = NodePath("../BoxSizeA")
+theme = ExtResource("1_oyqvh")
+placeholder_text = "0"
+alignment = 1
+max_length = 6
+context_menu_enabled = false
+virtual_keyboard_type = 3
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxSizeC" type="LineEdit" parent="MainScrn/BoxSize_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.678571
+anchor_top = 0.375
+anchor_right = 0.964286
+anchor_bottom = 0.875
+focus_next = NodePath("../BoxSizeA")
+focus_previous = NodePath("../BoxSizeB")
+theme = ExtResource("1_oyqvh")
+placeholder_text = "0"
+alignment = 1
+max_length = 6
+context_menu_enabled = false
+virtual_keyboard_type = 3
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="BoxSize_Lable" type="Label" parent="MainScrn/BoxSize_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_right = 0.964286
+anchor_bottom = 0.375
+theme = ExtResource("10_w588s")
+theme_override_font_sizes/font_size = 30
+text = "Box Size:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CardSize_Cont" type="Control" parent="MainScrn"]
+layout_mode = 1
+anchor_top = 0.64
+anchor_right = 1.0
+anchor_bottom = 0.78
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="MainScrn/CardSize_Cont"]
+layout_mode = 0
+anchor_top = 0.142857
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.2, 0.2, 0.2, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CardSizeA" type="LineEdit" parent="MainScrn/CardSize_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.571429
+anchor_right = 0.464286
+anchor_bottom = 0.857143
+focus_next = NodePath("../CardSizeB")
+focus_previous = NodePath("../CardSizeB")
+theme = SubResource("Theme_tfg27")
+alignment = 1
+max_length = 6
+context_menu_enabled = false
+virtual_keyboard_type = 3
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CardSizeB" type="LineEdit" parent="MainScrn/CardSize_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535714
+anchor_top = 0.571429
+anchor_right = 0.964286
+anchor_bottom = 0.857143
+focus_next = NodePath("../CardSizeA")
+focus_previous = NodePath("../CardSizeA")
+theme = SubResource("Theme_0srcl")
+alignment = 1
+max_length = 6
+context_menu_enabled = false
+virtual_keyboard_type = 3
+select_all_on_focus = true
+metadata/_edit_use_anchors_ = true
+
+[node name="CardSizeLbl" type="Label" parent="MainScrn/CardSize_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.142857
+anchor_right = 0.964286
+anchor_bottom = 0.571429
+theme = ExtResource("10_w588s")
+theme_override_font_sizes/font_size = 30
+text = "Cardboard Size:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NavButtons_Cont" type="Control" parent="MainScrn"]
+layout_mode = 1
+anchor_top = 0.78
+anchor_right = 1.0
+anchor_bottom = 0.86
+metadata/_edit_use_anchors_ = true
+
+[node name="OptButton" type="Button" parent="MainScrn/NavButtons_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+focus_mode = 0
+theme = ExtResource("2_oj670")
+text = "Options"
+metadata/_edit_use_anchors_ = true
+
+[node name="LicButton" type="Button" parent="MainScrn/NavButtons_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+theme = SubResource("Theme_agl3k")
+text = "Licenses"
+metadata/_edit_use_anchors_ = true
+
+[node name="Display_Cont" type="Control" parent="MainScrn"]
+layout_mode = 1
+anchor_left = 0.0357143
+anchor_top = 0.02
+anchor_right = 0.964286
+anchor_bottom = 0.48
+metadata/_edit_use_anchors_ = true
+
+[node name="DispBG" type="Panel" parent="MainScrn/Display_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bauv5")
+metadata/_edit_use_anchors_ = true
+
+[node name="VLine" type="Panel" parent="MainScrn/Display_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.0384615
+anchor_bottom = 0.956522
+theme_override_styles/panel = SubResource("StyleBoxFlat_n462b")
+metadata/_edit_use_anchors_ = true
+
+[node name="HLine" type="Panel" parent="MainScrn/Display_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0384615
+anchor_top = 0.956522
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iuiei")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainScrn/Display_Cont"]
+layout_mode = 0
+anchor_left = 0.0384615
+anchor_right = 0.115385
+anchor_bottom = 0.782609
+theme_override_constants/separation = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="vLabel_A" type="Label" parent="MainScrn/Display_Cont/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="vLabel_B" type="Label" parent="MainScrn/Display_Cont/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="vLabel_C" type="Label" parent="MainScrn/Display_Cont/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="vLabel_D" type="Label" parent="MainScrn/Display_Cont/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="vLabel_E" type="Label" parent="MainScrn/Display_Cont/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainScrn/Display_Cont"]
+layout_mode = 0
+anchor_left = 0.076923
+anchor_top = 0.869565
+anchor_right = 1.0
+anchor_bottom = 0.956522
+theme_override_constants/separation = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="hLabel_E" type="Label" parent="MainScrn/Display_Cont/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="hLabel_D" type="Label" parent="MainScrn/Display_Cont/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="hLabel_C" type="Label" parent="MainScrn/Display_Cont/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="hLabel_B" type="Label" parent="MainScrn/Display_Cont/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="hLabel_A" type="Label" parent="MainScrn/Display_Cont/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="T_VLine" type="Panel" parent="MainScrn/Display_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.192308
+anchor_right = 0.230769
+anchor_bottom = 0.73913
+theme_override_styles/panel = SubResource("StyleBoxFlat_i8sk3")
+metadata/_edit_use_anchors_ = true
+
+[node name="T_HLine" type="Panel" parent="MainScrn/Display_Cont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.230769
+anchor_top = 0.73913
+anchor_right = 1.0
+anchor_bottom = 0.782609
+theme_override_styles/panel = SubResource("StyleBoxFlat_bre1q")
+metadata/_edit_use_anchors_ = true
+
+[node name="T_VBoxContainer" type="VBoxContainer" parent="MainScrn/Display_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.230769
+anchor_right = 0.346154
+anchor_bottom = 0.652174
+offset_bottom = -1.52588e-05
+theme_override_constants/separation = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="T_vLabel_A" type="Label" parent="MainScrn/Display_Cont/T_VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="T_vLabel_B" type="Label" parent="MainScrn/Display_Cont/T_VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="T_vLabel_C" type="Label" parent="MainScrn/Display_Cont/T_VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="T_HBoxContainer" type="HBoxContainer" parent="MainScrn/Display_Cont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.307692
+anchor_top = 0.652174
+anchor_right = 1.0
+anchor_bottom = 0.73913
+offset_top = -1.52588e-05
+theme_override_constants/separation = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="T_hLabel_C" type="Label" parent="MainScrn/Display_Cont/T_HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="T_hLabel_B" type="Label" parent="MainScrn/Display_Cont/T_HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="T_hLabel_A" type="Label" parent="MainScrn/Display_Cont/T_HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+theme = ExtResource("10_5s2mb")
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+
+[node name="TooLarge" type="Label" parent="MainScrn/Display_Cont"]
+visible = false
+layout_mode = 0
+anchor_left = 0.0384615
+anchor_top = 0.391304
+anchor_right = 0.961538
+anchor_bottom = 0.608696
+offset_bottom = 1.52588e-05
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("8_h3ms5")
+theme_override_font_sizes/font_size = 40
+text = "TOO LARGE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CalcButton" type="Button" parent="MainScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.86
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+theme = ExtResource("1_oyqvh")
+text = "Calculate"
+metadata/_edit_use_anchors_ = true
+
+[node name="Agree_txt" type="Label" parent="MainScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0714286
+anchor_top = 0.38
+anchor_right = 0.928571
+anchor_bottom = 0.48
+theme_override_colors/font_color = Color(1, 1, 1, 0.392157)
+theme_override_fonts/font = ExtResource("8_h3ms5")
+theme_override_font_sizes/font_size = 17
+text = "By installing and/or using this application, you agree to the licenses and terms within
+all sections of the \"Licenses\" screen."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HelpScrn" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.301961, 0.301961, 0.301961, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="BKDiagram" type="TextureRect" parent="HelpScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.02
+anchor_right = 0.75
+anchor_bottom = 0.54
+texture = ExtResource("13_pxha1")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="BKLegend" type="Label" parent="HelpScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0357143
+anchor_top = 0.56
+anchor_right = 0.964286
+anchor_bottom = 0.86
+offset_top = -3.05176e-05
+offset_bottom = -3.05176e-05
+theme = ExtResource("10_w588s")
+theme_override_font_sizes/font_size = 22
+text = "1 - Main box cutting diagram
+2 - Telescoping top cutting diagram
+3 - Box dimensions input
+4 - Cardboard sheet dimensions input
+5 - Options
+6 - Licenses
+7 - Calculate"
+metadata/_edit_use_anchors_ = true
+
+[node name="HowTo" type="Button" parent="HelpScrn"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.76
+anchor_right = 1.0
+anchor_bottom = 0.86
+focus_mode = 0
+theme = SubResource("Theme_nn1no")
+text = "How To
+Make A Box"
+metadata/_edit_use_anchors_ = true
+
+[node name="BKBack" type="Button" parent="HelpScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.86
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("1_oyqvh")
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="HowScrn" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.301961, 0.301961, 0.301961, 1)
+script = ExtResource("11_3l5ny")
+metadata/_edit_use_anchors_ = true
+
+[node name="ReturnBT" type="Button" parent="HowScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.86
+anchor_right = 1.0
+anchor_bottom = 0.99875
+offset_bottom = 3.05176e-05
+focus_mode = 0
+theme = SubResource("Theme_81102")
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Btn_Next" type="Button" parent="HowScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535714
+anchor_top = 0.78
+anchor_right = 0.928571
+anchor_bottom = 0.86
+focus_mode = 0
+theme = SubResource("Theme_nn1no")
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
+[node name="Btn_Prev" type="Button" parent="HowScrn"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0714286
+anchor_top = 0.78
+anchor_right = 0.464286
+anchor_bottom = 0.86
+focus_mode = 0
+theme = SubResource("Theme_nn1no")
+text = "Previous"
+metadata/_edit_use_anchors_ = true
+
+[node name="StepDisp" type="Label" parent="HowScrn"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.08
+theme_override_fonts/font = ExtResource("8_h3ms5")
+theme_override_font_sizes/font_size = 30
+text = "Step 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="S1" type="TextureRect" parent="HowScrn/StepDisp"]
+layout_mode = 2
+anchor_left = 0.0357143
+anchor_top = 1.0
+anchor_right = 0.964286
+anchor_bottom = 6.75
+texture = ExtResource("11_exh0k")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="S2" type="TextureRect" parent="HowScrn/StepDisp"]
+visible = false
+layout_mode = 2
+anchor_left = 0.0357143
+anchor_top = 1.0
+anchor_right = 0.964286
+anchor_bottom = 6.75
+texture = ExtResource("12_4eipp")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="S3" type="TextureRect" parent="HowScrn/StepDisp"]
+visible = false
+layout_mode = 2
+anchor_left = 0.0357143
+anchor_top = 1.0
+anchor_right = 0.964286
+anchor_bottom = 6.75
+texture = ExtResource("13_grfx2")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="S4" type="TextureRect" parent="HowScrn/StepDisp"]
+visible = false
+layout_mode = 2
+anchor_left = 0.0357143
+anchor_top = 1.0
+anchor_right = 0.964286
+anchor_bottom = 6.75
+texture = ExtResource("14_slmjb")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="S5" type="TextureRect" parent="HowScrn/StepDisp"]
+visible = false
+layout_mode = 2
+anchor_left = 0.0357143
+anchor_top = 1.0
+anchor_right = 0.964286
+anchor_bottom = 6.75
+texture = ExtResource("15_bbafd")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="S6" type="TextureRect" parent="HowScrn/StepDisp"]
+visible = false
+layout_mode = 2
+anchor_left = 0.0357143
+anchor_top = 1.0
+anchor_right = 0.964286
+anchor_bottom = 6.75
+texture = ExtResource("16_v3yd4")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="SCont" type="Control" parent="HowScrn"]
+anchors_preset = 0
+anchor_left = 0.0357143
+anchor_top = 0.54
+anchor_right = 0.964286
+anchor_bottom = 0.76
+offset_top = -3.05176e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="S1" type="Label" parent="HowScrn/SCont"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0909091
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("22_42omk")
+text = "Starting with a 6 x 12 piece of cardboard, put in the dimensions: 2 x 3 x 3. After pressing CALCULATE, you will have a blue line veritcally and a pink line horizontally. Mark the dimsensons onto the cardboard as they appear on the app (see above)."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="S2" type="Label" parent="HowScrn/SCont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0909091
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("22_42omk")
+text = "Starting with the numbers on the left, lightly score at those points horizontally. Score the highest number all the way through.
+Finally, lightly score the numbers on the bottom vertically, and score the highest number all the way through."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="S3" type="Label" parent="HowScrn/SCont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0909091
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("22_42omk")
+text = "Starting with the top left scored square, cut out every other square to prepare the folding process."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="S4" type="Label" parent="HowScrn/SCont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0909091
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("22_42omk")
+text = "In some cases such as this one, you may need to cut out two remaining squares to make the box look like a cross. This allows smaller boxes to fold properly.
+For larger boxes, you want to skip this step."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="S5" type="Label" parent="HowScrn/SCont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0909091
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("22_42omk")
+text = "Fold all of the score lines into each other until you get something that resembles the picture above. Add tape to the sides to keep the box in place."
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="S6" type="Label" parent="HowScrn/SCont"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.0909091
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("22_42omk")
+text = "Congratulations! You have made a custom box.
+
+Notice that one flap was cut off because it was not possible to close it with two. Each box will vary for your needs, so play around with the possibilities!"
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="value_changed" from="OptScrn/LS_Cont/LS_Slider" to="OptScrn" method="_on_ls_slider_value_changed"]
+[connection signal="pressed" from="OptScrn/Op_Exit" to="OptScrn" method="_on_op_exit_pressed"]
+[connection signal="ready" from="OptScrn/Op_Exit" to="OptScrn" method="_on_op_exit_ready"]
+[connection signal="pressed" from="OptScrn/Op_Help" to="OptScrn" method="_on_op_help_pressed"]
+[connection signal="pressed" from="LicScrn/HBoxContainer/LicB_BoxKaster" to="LicScrn" method="_on_lic_b_box_kaster_pressed"]
+[connection signal="pressed" from="LicScrn/HBoxContainer/LicB_Godot" to="LicScrn" method="_on_lic_b_godot_pressed"]
+[connection signal="pressed" from="LicScrn/HBoxContainer/LicB_FreeType" to="LicScrn" method="_on_lic_b_free_type_pressed"]
+[connection signal="pressed" from="LicScrn/HBoxContainer/LicB_ENet" to="LicScrn" method="_on_lic_b_e_net_pressed"]
+[connection signal="pressed" from="LicScrn/HBoxContainer/LicB_mbed" to="LicScrn" method="_on_lic_b_mbed_pressed"]
+[connection signal="pressed" from="LicScrn/HBoxContainer/LicB_Arcon" to="LicScrn" method="_on_lic_b_arcon_pressed"]
+[connection signal="pressed" from="LicScrn/LicBack" to="LicScrn" method="_on_lic_back_pressed"]
+[connection signal="pressed" from="MainScrn/NavButtons_Cont/OptButton" to="MainScrn" method="_on_opt_button_pressed"]
+[connection signal="pressed" from="MainScrn/NavButtons_Cont/LicButton" to="MainScrn" method="_on_lic_button_pressed"]
+[connection signal="pressed" from="MainScrn/CalcButton" to="MainScrn" method="_on_calc_button_pressed"]
+[connection signal="pressed" from="HelpScrn/HowTo" to="OptScrn" method="_on_how_to_pressed"]
+[connection signal="pressed" from="HelpScrn/BKBack" to="OptScrn" method="_on_bk_back_pressed"]
+[connection signal="pressed" from="HowScrn/ReturnBT" to="HowScrn" method="_on_return_bt_pressed"]
+[connection signal="pressed" from="HowScrn/Btn_Next" to="HowScrn" method="_on_btn_next_pressed"]
+[connection signal="pressed" from="HowScrn/Btn_Prev" to="HowScrn" method="_on_btn_prev_pressed"]

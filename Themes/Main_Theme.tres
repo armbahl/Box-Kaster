@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b35d76hgo7td1"]
+
+[ext_resource type="FontFile" uid="uid://bsvrv04mruawp" path="res://Fonts/Arcon-Regular.otf" id="1_j4jhu"]
+[ext_resource type="StyleBox" uid="uid://dv1ys3dhebjgh" path="res://Themes/Boxes/InpBox.tres" id="1_r0jjr"]
+[ext_resource type="StyleBox" uid="uid://dy8v1fjcuxht8" path="res://Themes/Boxes/CalcButtonBox.tres" id="1_w3fak"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seebd"]
+bg_color = Color(0, 0.74902, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20s02"]
+bg_color = Color(0, 0.55, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5kf6r"]
+bg_color = Color(0.63, 0.225, 0.9, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xw4l0"]
+bg_color = Color(0.976471, 1, 0.74902, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[resource]
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_j4jhu")
+Button/styles/focus = ExtResource("1_w3fak")
+Button/styles/hover = SubResource("StyleBoxFlat_seebd")
+Button/styles/normal = ExtResource("1_w3fak")
+Button/styles/pressed = SubResource("StyleBoxFlat_20s02")
+LineEdit/colors/font_color = Color(1, 1, 1, 1)
+LineEdit/colors/font_selected_color = Color(1, 1, 1, 1)
+LineEdit/colors/selection_color = Color(0, 0.5, 0, 1)
+LineEdit/font_sizes/font_size = 24
+LineEdit/fonts/font = ExtResource("1_j4jhu")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_5kf6r")
+LineEdit/styles/normal = ExtResource("1_r0jjr")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_xw4l0")

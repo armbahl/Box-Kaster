@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cvq4vcltnsgub"]
+
+[ext_resource type="FontFile" uid="uid://bsvrv04mruawp" path="res://Fonts/Arcon-Regular.otf" id="1_mcqn1"]
+
+[resource]
+Label/fonts/font = ExtResource("1_mcqn1")
