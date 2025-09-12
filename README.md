@@ -1,8 +1,8 @@
 # Box Kaster
 
-[**Box Kaster uses the CC BY-SA 4.0 license.**](https://gitlab.com/ARandomMeatball/box-kaster/-/blob/main/LICENSE?ref_type=heads)
+[**Box Kaster uses the CC BY-SA 4.0 license.**]([https://gitlab.com/ARandomMeatball/box-kaster/-/blob/main/LICENSE?ref_type=heads](https://github.com/armbahl/Box-Kaster/blob/main/LICENSE))
 
-All other components of this program use different licenses. [**Click here to read them.**](https://gitlab.com/ARandomMeatball/box-kaster/-/blob/main/LICENSE_OTHERS?ref_type=heads)
+All other components of this program use different licenses. [**Click here to read them.**](https://github.com/armbahl/Box-Kaster/blob/main/LICENSE_OTHERS)
 
 All licenses are also included in a dedicated submenu within the program.
 
@@ -18,11 +18,11 @@ There is a built-in tutorial on how to create a box. It is located within Option
 ## Example
 This program can help you turn a flat piece of cardboard like this,
 
-<img src="https://gitlab.com/ARandomMeatball/boxkaster/-/raw/master/Photos/B_1.jpg?ref_type=heads" alt="B_1" width="400"/>
+<img src="https://github.com/armbahl/Box-Kaster/blob/main/Photos/B_6.jpg?raw=true" width="400"/>
 
 Into a box like this!
 
-<img src="https://gitlab.com/ARandomMeatball/boxkaster/-/raw/master/Photos/B_6.jpg?ref_type=heads" alt="B_6" width="300"/>
+<img src="https://github.com/armbahl/Box-Kaster/blob/main/Photos/B_6.jpg?raw=true" width="300"/>
 
 ## How to Compile
 You will need GODOT version 4.3 or above on your machine. You can grab the lastest stable version [here](https://godotengine.org/download/windows/). Once you have GODOT on your system, you can go to the "Export" option within the engine and export it for your desired platform.
