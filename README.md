@@ -18,7 +18,7 @@ There is a built-in tutorial on how to create a box. It is located within Option
 ## Example
 This program can help you turn a flat piece of cardboard like this,
 
-<img src="https://github.com/armbahl/Box-Kaster/blob/main/Photos/B_6.jpg?raw=true" width="400"/>
+<img src="https://raw.githubusercontent.com/armbahl/Box-Kaster/refs/heads/main/Photos/B_1.jpg" width="400"/>
 
 Into a box like this!
 
